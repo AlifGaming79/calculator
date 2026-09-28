@@ -1,5 +1,5 @@
-let angkaPertama = prompt('masukkan angka pertama')
-let angkaKedua = prompt('masukkan angka kedua')
+let angkaPertama = parseInt(prompt('masukkan angka pertama: '))
+let angkaKedua = parseInt(prompt('masukkan angka kedua: '))
 
 const perhitungan = angkaPertama + angkaKedua
 const hasilPerhitungan = perhitungan
