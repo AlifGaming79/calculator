@@ -1,7 +1,13 @@
-//let angkaPertama = parseInt(prompt('masukkan angka pertama: '))
-//let angkaKedua = parseInt(prompt('masukkan angka kedua: '))
+const output = document.getElementById('calculator-ouput')
 
-const perhitungan = angkaPertama + angkaKedua
-const hasilPerhitungan = perhitungan
+function calculate() {
+    const angkaPertama = parseInt(prompt('masukkan angka pertama: '))
+    const angkaKedua = parseInt(prompt('masukkan angka kedua: '))
+    
+    const perhitungan = angkaPertama + angkaKedua
+    const hasilPerhitungan = perhitungan
 
-console.log(hasilPerhitungan)
+    output.innerHTML = hasilPerhitungan
+
+}
+calculate()
