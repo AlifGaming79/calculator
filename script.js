@@ -1,12 +1,16 @@
 const output = document.getElementById('calculator-output')
+const number = document.querySelectorAll('.number')
 
 function calculate() {
-    const angkaPertama = parseInt(prompt('masukkan angka pertama: '))
-    const angkaKedua = parseInt(prompt('masukkan angka kedua: '))
-    
-    const perhitungan = angkaPertama + angkaKedua
-    const hasilPerhitungan = perhitungan
 
-    output.innerHTML = hasilPerhitungan
+    let numberOutput 
+
+    number.forEach((button) => {
+        button.addEventListener('click', () => {
+            numberOutput = button.textContent
+            output.innerHTML = numberOutput
+        })
+    })
 
 }
+calculate()
