@@ -1,4 +1,4 @@
-const output = document.getElementById('calculator-ouput')
+const output = document.getElementById('calculator-output')
 
 function calculate() {
     const angkaPertama = parseInt(prompt('masukkan angka pertama: '))
@@ -10,4 +10,3 @@ function calculate() {
     output.innerHTML = hasilPerhitungan
 
 }
-calculate()
