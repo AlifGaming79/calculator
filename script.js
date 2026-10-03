@@ -1,9 +1,15 @@
 const output = document.getElementById('calculator-output')
 const number = document.querySelectorAll('.number')
+const operator = document.querySelectorAll('.operator')
 
-function calculate() {
+let numberOutput 
+let operatorOutput
 
-    let numberOutput 
+    operator.forEach((button) => {
+        button.addEventListener('click', () => {
+            operatorOutput = button.textContent
+        })
+    })
 
     number.forEach((button) => {
         button.addEventListener('click', () => {
@@ -12,5 +18,7 @@ function calculate() {
         })
     })
 
+function calculate() {
+    
 }
 calculate()
