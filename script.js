@@ -15,7 +15,7 @@ output.textContent = 0;
 
 number.forEach((button) => {
   button.addEventListener("click", () => {
-    if (value === "0") {
+    if (value === "") {
       value = button.textContent;
     } else {
       value += button.textContent;
@@ -35,3 +35,7 @@ operator.forEach((button) => {
   });
 });
 
+equal.addEventListener("click", () => {
+    if (firstNumber === null || operatorOutput === null || value === "") return;
+    calculate()
+})
