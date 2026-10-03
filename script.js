@@ -83,7 +83,7 @@ function calculate() {
         case "-":
             result = firstNumber - secondNumber;
             break;
-        case "×":
+        case "x":
             result = firstNumber * secondNumber;
             break;
         case "÷":
