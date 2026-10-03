@@ -53,3 +53,10 @@ del.addEventListener("click", () => {
         output.textContent = value || "0";
     }
 })
+
+point.addEventListener("click", () => {
+    if (!value.includes(".")) {
+        value = value === "" ? "0." : value + ".";
+        output.textContent = value;
+    }
+})
