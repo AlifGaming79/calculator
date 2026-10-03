@@ -60,3 +60,10 @@ point.addEventListener("click", () => {
         output.textContent = value;
     }
 })
+
+persen.addEventListener("click", () => {
+    if(value !== "") {
+        value = (parseFloat(value) / 100).toString();
+        output.textContent = value;
+    }
+})
