@@ -29,6 +29,10 @@ operator.forEach((button) => {
   button.addEventListener("click", () => {
     if (firstNumber === null && value === "") return;
 
+    if(firstNumber !== null && value !== "") {
+        calculate();
+    }
+
     firstNumber = parseFloat(value);
     operatorOutput = button.textContent;
     value = "";
@@ -67,3 +71,28 @@ persen.addEventListener("click", () => {
         output.textContent = value;
     }
 })
+
+function calculate() {
+    const secondNumber = parseFloat(value);
+    let result;
+
+    switch (operatorOutput) {
+        case "+":
+            result = firstNumber + secondNumber;
+            break;
+        case "-":
+            result = firstNumber - secondNumber;
+            break;
+        case "×":
+            result = firstNumber * secondNumber;
+            break;
+        case "÷":
+            result = firstNumber / secondNumber;
+            break;
+    }
+
+    output.textContent = result;
+    value = result.toString();
+    firstNumber = null;
+    operatorOutput = null;
+}
