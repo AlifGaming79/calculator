@@ -46,3 +46,10 @@ c.addEventListener("click", () => {
     operatorOutput = null;
     output.textContent = 0;
 })
+
+del.addEventListener("click", () => {
+    if(value.length > 0) {
+        value = value.slice(0, -1);
+        output.textContent = value || "0";
+    }
+})
