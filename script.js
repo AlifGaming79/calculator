@@ -39,3 +39,10 @@ equal.addEventListener("click", () => {
     if (firstNumber === null || operatorOutput === null || value === "") return;
     calculate()
 })
+
+c.addEventListener("click", () => {
+    value = "";
+    firstNumber = null;
+    operatorOutput = null;
+    output.textContent = 0;
+})
